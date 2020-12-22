@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>本站0.1版本</h2>
+		<p>显示博客,新闻,b站个人主页.微博个人主页.适配pc和手机.可以播放音乐,留言.可以用Markdown写文章.注册登录界面</p>
+		<h3>下一版本0.11构思</h3>
+		<p>增加更多的css代码.实现前后端分离.可以播放主流音视频格式.前后端使用主流框架.增加python代码编译器.实现用户系统</p>
+		<h1>本站html源码</h1>
+		<textarea>
+			<!DOCTYPE html>
+			<html lang="en">
+			 <head>
+			  <meta charset="UTF-8">
+			  <title>kunimine</title>
+			  <meta name="viewport" content="width=720,initial-scale=0.5, minimum-scale=0.1, maximum-scale=1.0, user-scalable=yes"/>
+			  <link rel="stylesheet" href="style.css">
+			 </head>
+			 <body>
+			     <!--pc 手机适配-->
+			     <script type="text/javascript">
+			        $(function(){
+			            resizewin();
+			            window.οnresize=function(){resizewin()};
+			            function resizewin() {
+			                let designSize = 1920; // 设计图尺寸
+			                let html = document.documentElement;
+			                let wW = html.clientWidth;// 窗口宽度
+			                let rem = wW * 100 / designSize; 
+			                document.getElementsByTagName("html")[0].style.fontSize = rem + 'px';
+			            }
+			
+			            $("#tkgb").click(function () {
+			                $('#tanchu').hide();
+			            });
+			            $(".tcbtn").click(function(){
+			                $("#tanchu").show();
+			            })
+			
+			
+			            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+			               $(".footer").css({"padding-bottom": "145px"});
+			            }
+			            
+			        });
+			    </script>
+			    <!--网页音乐-->
+			    <a class="play" id="audioBtn" style="cursor:pointer;" onclick="autoPlay()"></a>
+			                    <audio id="bgMusic" src="/music/seve.m4a" autoplay preload loop="loop"></audio>
+			    <!--网页实现-->
+			 	<div class="main-wrapper">
+				<header>
+					<nav>
+					    <li class="logo"><a href="self.html">kunimine</a></li>
+						<ul>
+							<li><a href="kunimine.tk" class="active">首页</a></li>
+							<li><a href="https://space.bilibili.com/406907644">Bilibili</a></li>
+							<li><a href="https://weibo.com/xgfsgf">微博</a></li>
+							<li><a href="leave_word/main.html">留言</a></li>
+							<li><a href="/music/music.html">音乐</a></li>
+						</ul>
+					</nav>-->
+					<div id="banner">
+						<div class="inner">
+							<h1>kunimine</h1>
+							<p class="sub-heading">Proramming changes the world，你觉得呢？</p>
+							 <button class="main-btn">了解我</button>
+							 <!-- <div class="more">
+							 	更多
+							 </div> -->
+						</div>
+					</div>
+				</header>
+			
+				<div class="content"><!--内容开始-->
+					<section class="green-section">
+						<div class="wrapper">
+							<div>
+								<h2></h2>
+								<div class="hr"></div>
+								<p class="sub-heading">lorem ipsum dolor sit amet, 
+								consectetur adipisicing elit.</p>
+							</div>
+							<div class="icon-group">
+								<span class="icon">item1</span>
+								<span class="icon">item2</span>
+								<span class="icon">item3</span>
+							</div>
+						</div>
+					</section>
+					<section class="gray-section">
+			
+						<div class="article-preview">
+						<div class="img-section">
+								<img src="img/icon1.png" alt=""></div>
+							<div class="text-section">
+								<h2>又一个标题</h2>
+								<div class="sub-heading">我是副标题你好</div>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+							
+							</div>
+			
+						<div class="article-preview">
+							
+							<div class="text-section">
+								<h2>又一个标题</h2>
+								<div class="sub-heading">我是副标题你好</div>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+			
+							<div class="img-section">
+								<img src="img/icon2.png" alt="">
+							</div>
+							
+						</div>
+			
+						<div class="article-preview">
+							<div class="img-section">
+								<img src="img/icon3.png" alt="">
+							</div>
+							<div class="text-section">
+								<h2>又一个标题</h2>
+								<div class="sub-heading">我是副标题你好</div>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+						</div>
+					</section>
+			
+					<section class="purple-section">
+					<div class="wrapper">
+						<div class="heading-wrspper">
+							<h2>又是一个标题</h2>
+							<div class="hr"></div>
+							<div class="sub-heading">
+								Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.
+							</div>
+						</div>
+						<div class="card-group
+						clearfix">
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+						</div>
+			
+						<div class="card-group
+						clearfix">
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+						</div>
+			
+						<div class="card-group
+						clearfix">
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+							<div class="card">
+								<h3>标题三</h3>
+								<p>Formally established in 1946, the aim is to promote cooperation among countries through education, science and culture, and contribute to world peace and security. According to the introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+							</div>
+						</div>
+					</div>
+					</section>
+				</div><!--内容结束-->
+			
+				<footer><!--页脚开始-->	
+					<ul class="share-group">
+						<li>blog</li>
+						<li><a href=""></a></li>
+						<li>item3</li>
+						<li><a herf="/python">python</a></li>
+						<li><a href="http://henaer.tk">fourum</a></li>
+						<li><a href="/code.html">本站源码</a></li>
+					</ul>
+			
+					<div class="copy">
+						&copy kunimine 2018-2020
+					</div>
+				</footer><!--页脚结束-->
+				</div>
+				</body>
+			</html>
+		</textarea>
+	</body>
+</html>
