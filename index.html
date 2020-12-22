@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>kunimine</title>
+	<meta name="viewport" content="width=720,initial-scale=0.5, minimum-scale=0.1, maximum-scale=1.0, user-scalable=yes"/>
+	<link rel="stylesheet" href="style.css">
+	<style type="text.css">
+		music_player{width: 400px; height: 155px; background: #483D8B;margin: 200px auto;}
+	</style>
+ </head>
+ <body>
+	 <style>
+	 	a{ text-decoration:none}
+	 	a:hover{ text-decoration:none}
+	 </style>
+     <!--pc 手机适配-->
+     <script type="text/javascript">
+        $(function(){
+            resizewin();
+            window.οnresize=function(){resizewin()};
+            function resizewin() {
+                let designSize = 1920; // 设计图尺寸
+                let html = document.documentElement;
+                let wW = html.clientWidth;// 窗口宽度
+                let rem = wW * 100 / designSize; 
+                document.getElementsByTagName("html")[0].style.fontSize = rem + 'px';
+            }
+
+            $("#tkgb").click(function () {
+                $('#tanchu').hide();
+            });
+            $(".tcbtn").click(function(){
+                $("#tanchu").show();
+            })
+
+
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+               $(".footer").css({"padding-bottom": "145px"});
+            }
+            
+        });
+    </script>
+    <!--网页实现-->
+ 	<div class="main-wrapper">
+	<header>
+		<nav>
+		    <li class="logo"><a href="self.html">kunimine</a></li>
+			<ul>
+				<li>
+					<!--网页音乐-->
+					<div id="music_player" class="">
+						<audio controls>
+							<source src="music/爆炸的花总%20-%20少一点天分%20(片段).mp3" type="audio/mpeg"></source>
+						</audio>
+					</div>
+					<a class="play" id="audioBtn" style="cursor:pointer;" onclick="autoPlay()"></a>
+					                <audio id="bgMusic" src="/music/seve.m4a" autoplay preload loop="loop"></audio>
+				</li>
+				<li><a href="kunimine.tk" class="active">首页</a></li>
+				<li><a href="https://space.bilibili.com/406907644">Bilibili</a></li>
+				<li><a href="https://weibo.com/xgfsgf">微博</a></li>
+				<li><a href="leave_word/main.html">留言</a></li>
+				<li><a href="/music/music.html">音乐</a></li>
+			</ul>
+		</nav>-->
+		<div id="banner">
+			<div class="inner">
+				<h1>kunimine</h1>
+				<p class="sub-heading">Proramming changes the world，你觉得呢？</p>
+				 <button class="main-btn">了解我</button>
+				 <!-- <div class="more">
+				 	更多
+				 </div> -->
+			</div>
+		</div>
+	</header>
+
+	<div class="content"><!--内容开始-->
+		<section class="green-section">
+			<div class="wrapper">
+				<div>
+					<h2></h2>
+					<div class="hr"></div>
+					<p class="sub-heading">lorem ipsum dolor sit amet, 
+					consectetur adipisicing elit.</p>
+				</div>
+				<div class="icon-group">
+					<span class="icon">item1</span>
+					<span class="icon">item2</span>
+					<span class="icon">item3</span>
+				</div>
+			</div>
+		</section>
+		<section class="gray-section">
+
+			<div class="article-preview">
+			<div class="img-section">
+					<img src="img/icon1.png" alt=""></div>
+				<div class="text-section">
+					<h2>浅谈操作系统</h2>
+					<div class="sub-heading">世界上主流的操作系统</div>
+					<p>现在世界上主流的操作系统主要是Linux,Windows,macos和unix.其中Windows占的市场份额最多达到80%左右</p>
+					<div class="sub-heading">好用的Linux</div>
+					<p>Linux是由Linus1991年基于unix开发的开源和自由传播的操作系统.
+					<br>其主要特点是开放性,多任务,多用户,安全性高,兼容性(最小的Linux发行版只有几十M可以适配非常多硬件也可以做嵌入式系统,Android系统就是基于Linux开发的),良好的用户页面(Ubuntu的桌面美化非常漂亮),可以直接访问和编译内核.
+					<br>发行版本:有Debian系的Ubuntu,Arch系的manjaro,Redhat系的centos和suse系的opensuse.
+					<br>Linux系统结构:内核,shell(用户可以通过shell进行交互操作,而且shell是一个命令解释器,还是一门高级编程语言,),外层应用程序.
+					<br>虽然现在Windows占到市场份额的80%左右,但Linux现在的深度操作系统已经非常和Windows相似,并且开始在个人pc普及和预装.而主流的企业服务器系统大部分都是Redhat的centos系统,所以每个程序员必须要懂一些Linux的基础命令
+					<br>Linux一些简单命令:ls查看当前目录下的文件.cd .. 移动到命令后的目录,..是移动到上个目录.mkdir添加一个新目录
+					</p>
+					<div class="sub-heading">Windows和unix</div>
+					<p>Windows就先不说,大家应该很熟悉.unix大概是1969年在贝尔实验室开发出来的,当时主要是做为服务器系统和科学计算系统.而现在由于系统羞涩难懂一般用于开发平台.现在的市场上的unix大部分都是类unix,unix现在也成为了一套规范,遵循此规范的操作系统都是类nuix.发行版本:freeBSD</p>
+				
+				</div>
+
+			<div class="article-preview">
+				
+				<div class="text-section">
+					<h2>又一个标题</h2>
+					<div class="sub-heading">我是副标题你好</div>
+					<p>内容</p>
+				</div>
+
+				<div class="img-section">
+					<img src="img/icon2.png" alt="">
+				</div>
+				
+			</div>
+
+			<div class="article-preview">
+				<div class="img-section">
+					<img src="img/icon3.png" alt="">
+				</div>
+				<div class="text-section">
+					<h2>又一个标题</h2>
+					<div class="sub-heading">我是副标题你好</div>
+					<p>内容</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="purple-section">
+		<div class="wrapper">
+			<div class="heading-wrspper">
+				<h2>又是一个标题</h2>
+				<div class="hr"></div>
+				<div class="sub-heading">
+					内容
+				</div>
+			</div>
+			<div class="card-group
+			clearfix">
+				<div class="card">
+					<h3>算法在程序中的地位</h3>
+					<p>算法,是一个程序的灵魂,有一个梗是数据结构+算法=应用程序.算法的定义算法就是一系列的计算步骤用来将输入数据转换成</p>
+				</div>
+				<div class="card">
+					<h3>苹果MacbootairM1芯片漏洞</h3>
+					<p>前几天腾讯玄武安全实验室爆出了苹果M1版本的MacBookair系统漏洞,攻击者可以绕过系统保护发起攻击获取root的权限(这个漏洞的攻击只有几行代码只需要几秒便可破解),而这个漏洞只要是恶意的'开发者'都可以攻击.相同的漏洞在iphone12上也有,在退出应用程序后,破解应用仍可以获取相册和通讯录的访问权限</p>
+				</div>
+			</div>
+
+			<div class="card-group
+			clearfix">
+				<div class="card">
+					<h3>标题三</h3>
+					<p>教程</p>
+				</div>
+				<div class="card">
+					<h3>标题三</h3>
+					<p>新闻</p>
+				</div>
+			</div>
+
+			<div class="card-group
+			clearfix">
+				<div class="card">
+					<h3>标题三</h3>
+					<p>教程</p>
+				</div>
+				<div class="card">
+					<h3>标题三</h3>
+					<p>新闻</p>
+				</div>
+			</div>
+		</div>
+		</section>
+	</div><!--内容结束-->
+
+	<footer><!--页脚开始-->	
+		<ul class="share-group">
+			<li>blog</li>
+			<li><a href="free_blog/main.html">开放博客</a></li>
+			<li>item3</li>
+			<li><a herf="/python">python</a></li>
+			<li><a href="http://henaer.tk">fourum</a></li>
+			<li><a href="/code.html">本站源码</a></li>
+		</ul>
+
+		<div class="copy">
+			&copy kunimine 2018-2020
+		</div>
+	</footer><!--页脚结束-->
+	</div>
+	</body>
+</html>
